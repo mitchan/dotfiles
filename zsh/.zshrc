@@ -71,7 +71,7 @@ export PATH="$PATH:/usr/local/opt/openvpn/sbin"
 export PATH="$PATH:/Users/francesco/Projects/Personal/dotfiles/scripts/cht.sh"
 
 # binding
-bindkey -s ^f "~/Projects/Personal/dotfiles/scripts/tmux-sessionizer\n"
+bindkey -s ^f "~/.local/scripts/tmux-sessionizer\n"
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
