@@ -1,0 +1,12 @@
+[http]
+	postBuffer = 524288000
+	version = HTTP/2
+[push]
+	autoSetupRemote = true
+[user]
+	name = Francesco Casetta
+	email = francesco.casetta@gmail.com
+[includeIf "gitdir:~/Projects/Work/"]
+  path = ~/.gitconfig-work
+[core]
+	editor = vim
