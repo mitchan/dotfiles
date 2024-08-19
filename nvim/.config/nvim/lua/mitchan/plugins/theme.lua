@@ -1,14 +1,38 @@
+-- return {
+--'catppuccin/nvim',
+--name = 'catppuccin',
+--priority = 1000,
+--config = function()
+--require('catppuccin').setup {
+--flavour = 'mocha',
+--transparent_background = false,
+--kitty = true,
+--}
+
+--vim.cmd 'colorscheme catppuccin'
+--end,
+--}
+
+-- kanagawa theme
 return {
-  'catppuccin/nvim',
-  name = 'catppuccin',
+  'rebelot/kanagawa.nvim',
+  name = 'kanagawa',
   priority = 1000,
   config = function()
-    require('catppuccin').setup {
-      flavour = 'mocha',
-      transparent_background = true,
-      kitty = true,
+    require('kanagawa').setup {
+      keywordStyle = { italic = false },
+      colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = 'none',
+            },
+          },
+        },
+      },
     }
 
-    vim.cmd 'colorscheme catppuccin'
+    -- set the colorscheme
+    vim.cmd 'colorscheme kanagawa-dragon'
   end,
 }
