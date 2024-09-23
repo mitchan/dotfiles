@@ -88,7 +88,12 @@ return {
 
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
+        'eslint-lsp',
+        'eslint_d',
+        'prettier',
         'stylua',
+        'ts_ls',
+        'volar',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
