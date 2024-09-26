@@ -35,6 +35,7 @@ return { -- Autoformat
       javascriptreact = fmtPrettier(),
       typescriptreact = fmtPrettier(),
       css = fmtPrettier(),
+      vue = fmtPrettier(),
       html = fmtPrettier(),
       json = fmtPrettier(),
       yaml = fmtPrettier(),

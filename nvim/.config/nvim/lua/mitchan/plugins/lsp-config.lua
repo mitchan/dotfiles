@@ -82,6 +82,19 @@ return {
             },
           },
         },
+        ts_ls = {
+          init_options = {
+            plugins = {
+              {
+                name = '@vue/typescript-plugin',
+                location = '/Users/francesco/.nvm/versions/node/v22.8.0/lib/node_modules/@vue/typescript-plugin',
+                languages = { 'typescript', 'vue' },
+              },
+            },
+          },
+          filetypes = { 'javascript', 'typescript', 'vue', 'typescriptreact' },
+          on_attach = on_attach,
+        },
       }
 
       require('mason').setup()
