@@ -1,0 +1,20 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="pro" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/spiagge-pro/" {
+        pane name="nvim"
+    }
+    tab name="node" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/spiagge-pro/" {
+        pane name="node"
+    }
+    tab name="docker" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/" {
+        pane name="docker"
+    }
+}
