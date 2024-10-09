@@ -93,7 +93,6 @@ return {
             },
           },
           filetypes = { 'javascript', 'typescript', 'vue', 'typescriptreact' },
-          on_attach = on_attach,
         },
       }
 
