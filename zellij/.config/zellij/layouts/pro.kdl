@@ -8,13 +8,22 @@ layout {
             plugin location="zellij:status-bar"
         }
     }
-    tab name="pro" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/spiagge-pro/" {
-        pane name="nvim"
-    }
-    tab name="node" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/spiagge-pro/" {
-        pane name="node"
-    }
     tab name="docker" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/" {
         pane name="docker"
+    }
+    tab name="pro" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/spiagge-pro/" {
+        pane name="pro"
+    }
+    tab name="api" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/spiagge-api/" {
+        pane name="api"
+    }
+    tab name="pam" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/pam/" {
+        pane name="pam"
+    }
+    tab name="b2bridge" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/b2bridge/" {
+        pane name="b2bridge"
+    }
+    tab name="team" split_direction="Vertical" cwd="/Users/francesco/Projects/Work/contexts/repos/yourbeachteam/app/" {
+        pane name="team"
     }
 }
