@@ -102,10 +102,12 @@ return {
       vim.list_extend(ensure_installed, {
         'eslint-lsp',
         'eslint_d',
+        'lua-language-server',
+        'prettierd',
         'prettier',
         'stylua',
         'ts_ls',
-        'volar',
+        'vue-language-server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

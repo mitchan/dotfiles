@@ -1,1 +1,2 @@
-require('mitchan.core.keymaps')
+require 'mitchan.core.options'
+require 'mitchan.core.keymaps'
