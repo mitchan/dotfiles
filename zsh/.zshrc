@@ -1,16 +1,10 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/francesco/.oh-my-zsh"
 export DISABLE_AUTO_TITLE='true'
+export EDITOR='nvim'
 
 ZSH_THEME="af-magic"
 
@@ -30,9 +24,9 @@ alias pro="cd ~/Projects/Work/contexts/repos/spiagge-pro/"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 
 # GO
-export GOPATH=/user/local/go
-export GOBIN=$GOPATH/bin
-export PATH="$PATH:$GOBIN"
+# export GOPATH=/user/local/go
+# export GOBIN=$GOPATH/bin
+# export PATH="$PATH:$GOBIN"
 
 # ################## NVM ####################
 export NVM_DIR="$HOME/.nvm"
@@ -73,8 +67,12 @@ export PATH="$PATH:/Users/francesco/Projects/Personal/dotfiles/scripts/cht.sh"
 # binding
 bindkey -s ^f "~/.local/scripts/tmux-sessionizer\n"
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# goenv
+# export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+
