@@ -6,7 +6,7 @@
 [user]
 	name = Francesco Casetta
 	email = francesco.casetta@gmail.com
-[includeIf "gitdir:~/Projects/Work/"]
+[includeIf "gitdir:~/dev/Work/"]
   path = ~/.gitconfig-work
 [core]
 	editor = vim
