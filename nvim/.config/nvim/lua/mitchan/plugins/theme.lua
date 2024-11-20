@@ -1,34 +1,32 @@
--- return {
---   'folke/tokyonight.nvim',
---   lazy = false,
---   priority = 1000,
---   opts = {},
---   config = function()
---     vim.cmd [[colorscheme tokyonight]]
---   end,
--- }
-
--- return {
---   'catppuccin/nvim',
---   name = 'catppuccin',
---   priority = 1000,
---   config = function()
---     require('catppuccin').setup {
---       flavour = 'frappe',
---       transparent_background = false,
---       kitty = true,
---     }
---
---     vim.cmd 'colorscheme catppuccin'
---   end,
--- }
-
 return {
-  'rebelot/kanagawa.nvim',
-  name = 'kanagawa',
-  config = function()
-    require('kanagawa').setup {}
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+    },
+  },
 
-    vim.cmd 'colorscheme kanagawa'
-  end,
+  {
+    'catppuccin/nvim',
+    lazy = false,
+    name = 'catppuccin',
+    priority = 1000,
+    opts = {
+      flavour = 'frappe',
+    },
+  },
+
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    priority = 1000,
+  },
+
+  {
+    'oxfist/night-owl.nvim',
+    lazy = false,
+    priority = 1000,
+  },
 }
