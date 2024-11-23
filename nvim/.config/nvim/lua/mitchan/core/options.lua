@@ -35,6 +35,7 @@ opt.inccommand = 'split'
 opt.cursorline = true
 
 opt.scrolloff = 10
+opt.colorcolumn = '80'
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
