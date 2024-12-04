@@ -10,16 +10,7 @@ return {
     name = 'catppuccin',
     opts = {
       flavour = 'frappe',
+      transparent_background = true,
     },
-  },
-
-  {
-    'rebelot/kanagawa.nvim',
-    lazy = false,
-  },
-
-  {
-    'oxfist/night-owl.nvim',
-    lazy = false,
   },
 }
