@@ -103,6 +103,8 @@ return {
       vim.list_extend(ensure_installed, {
         'eslint-lsp',
         'eslint_d',
+        'intelephense',
+        'gopls',
         'lua-language-server',
         'prettierd',
         'prettier',

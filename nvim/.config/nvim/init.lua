@@ -5,7 +5,8 @@ vim.g.maplocalleader = '\\'
 
 vim.g.have_nerd_font = true
 
-require 'mitchan'
+require 'config.core.options'
+require 'config.core.keymaps'
 require 'config.lazy'
 
 vim.api.nvim_create_autocmd('TextYankPost', {
