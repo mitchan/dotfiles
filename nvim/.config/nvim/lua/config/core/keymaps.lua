@@ -3,8 +3,13 @@ local keymap = vim.keymap -- for conciseness
 keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+-- keymap.set('n', '[b', '<cmd>bprevious<CR>', { desc = 'Previous buffer' })
+-- keymap.set('n', ']b', '<cmd>bnext<CR>', { desc = 'Next buffer' })
+
 -- diagnostic
 keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+-- keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to prev [D]iagnostic message' })
+-- keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 
 -- Disable arrow keys in normal mode
 keymap.set('n', '<left>', '<cmd>echo "Use h to move!"<CR>')

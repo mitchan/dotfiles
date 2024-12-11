@@ -6,12 +6,7 @@ return {
     'nvim-lua/plenary.nvim',
     {
       'nvim-telescope/telescope-fzf-native.nvim',
-
       build = 'make',
-
-      cond = function()
-        return vim.fn.executable 'make' == 1
-      end,
     },
     { 'nvim-telescope/telescope-ui-select.nvim' },
 
@@ -23,8 +18,17 @@ return {
         path_display = { 'smart' },
       },
       extensions = {
+        fzf = {},
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
+        },
+      },
+      pickers = {
+        find_files = {
+          theme = 'ivy',
+        },
+        live_grep = {
+          theme = 'dropdown',
         },
       },
     }
@@ -40,18 +44,10 @@ return {
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
-    vim.keymap.set('n', '<leader>/', function()
-      builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-        winblend = 10,
-        previewer = false,
-      })
-    end, { desc = '[/] Fuzzily search in current buffer' })
-
-    vim.keymap.set('n', '<leader>s/', function()
-      builtin.live_grep {
-        grep_open_files = true,
-        prompt_title = 'Live Grep in Open Files',
+    vim.keymap.set('n', '<leader>en', function()
+      builtin.find_files {
+        cwd = vim.fn.stdpath 'config',
       }
-    end, { desc = '[S]earch [/] in Open Files' })
+    end)
   end,
 }
