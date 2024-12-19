@@ -28,7 +28,8 @@ keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window'
 keymap.set('n', '<C-\\>', '<cmd>vsplit<CR>')
 
 -- Oil
-keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+-- keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+keymap.set('n', '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory' })
 
 -- tabs
 -- keymap.set('n', '<leader>to', '<cmd>tabnew<CR>', { desc = 'Open new tab' }) -- open new tab

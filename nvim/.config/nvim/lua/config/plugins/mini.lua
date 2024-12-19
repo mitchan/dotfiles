@@ -20,6 +20,6 @@ return {
 
     require('mini.bracketed').setup()
     require('mini.pairs').setup()
-    require('mini.tabline').setup()
+    -- require('mini.tabline').setup()
   end,
 }
