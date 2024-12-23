@@ -7,9 +7,9 @@ return {
     default_file_explorer = true,
     delete_to_trash = true,
     float = {
-      padding = 2,
-      max_width = 120,
-      max_height = 20,
+      padding = 5,
+      -- max_width = 120,
+      -- max_height = 20,
     },
     view_options = {
       natural_order = true,
@@ -19,4 +19,9 @@ return {
       end,
     },
   },
+  config = function(_, opts)
+    require('oil').setup(opts)
+
+    vim.keymap.set('n', '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory' })
+  end,
 }
