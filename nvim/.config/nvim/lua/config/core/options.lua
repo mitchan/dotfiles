@@ -22,7 +22,7 @@ opt.smartcase = true
 
 opt.updatetime = 250
 
-opt.timeoutlen = 300
+-- opt.timeoutlen = 300
 
 opt.splitright = true
 opt.splitbelow = true
