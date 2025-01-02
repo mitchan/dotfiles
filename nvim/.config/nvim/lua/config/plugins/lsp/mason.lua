@@ -3,8 +3,11 @@ return {
     'williamboman/mason.nvim',
     dependencies = {
       'williamboman/mason-lspconfig.nvim',
+      'saghen/blink.cmp',
     },
     config = function()
+      local lspconfig = require 'lspconfig'
+
       require('mason').setup()
 
       require('mason-lspconfig').setup {
@@ -19,11 +22,16 @@ return {
         },
         handlers = {
           function(server_name)
-            require('lspconfig')[server_name].setup {}
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
+            lspconfig[server_name].setup {
+              capabilities,
+            }
           end,
 
           ['lua_ls'] = function()
-            require('lspconfig')['lua_ls'].setup {
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
+            lspconfig['lua_ls'].setup {
+              capabilities,
               settings = {
                 Lua = {
                   completion = {
@@ -35,17 +43,19 @@ return {
           end,
 
           ['ts_ls'] = function()
-            require('lspconfig')['ts_ls'].setup {
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
+            lspconfig['ts_ls'].setup {
 
-              -- init_options = {
-              -- plugins = {
-              --   {
-              --     name = '@vue/typescript-plugin',
-              --     location = '/Users/francesco/.nvm/versions/node/v22.8.0/lib/node_modules/@vue/typescript-plugin',
-              --     languages = { 'typescript', 'vue' },
-              --   },
-              -- },
-              -- },
+              capabilities,
+              init_options = {
+                plugins = {
+                  {
+                    name = '@vue/typescript-plugin',
+                    location = '/Users/francesco/.nvm/versions/node/v22.8.0/lib/node_modules/@vue/typescript-plugin',
+                    languages = { 'vue' },
+                  },
+                },
+              },
               filetypes = { 'javascript', 'typescript', 'vue', 'typescriptreact' },
             }
           end,

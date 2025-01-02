@@ -4,7 +4,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      transparent = true,
+      transparent = false,
     },
   },
 
@@ -15,16 +15,7 @@ return {
     priority = 1000,
     opts = {
       flavour = 'frappe',
-      transparent_background = true,
-    },
-  },
-
-  {
-    'scottmckendry/cyberdream.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = true,
+      transparent_background = false,
     },
   },
 }

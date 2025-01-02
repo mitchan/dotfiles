@@ -3,6 +3,5 @@ function ColorMyPencils(color)
   vim.cmd.colorscheme(color)
 end
 
--- ColorMyPencils 'catppuccin'
-ColorMyPencils 'tokyonight'
--- ColorMyPencils 'cyberdream'
+ColorMyPencils 'catppuccin'
+-- ColorMyPencils 'tokyonight'

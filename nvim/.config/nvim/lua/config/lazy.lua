@@ -16,10 +16,7 @@ require('lazy').setup {
       import = 'config.plugins',
     },
     {
-      import = 'config.plugins.lsp.mason',
-    },
-    {
-      import = 'config.plugins.lsp.lsp-config',
+      import = 'config.plugins.lsp',
     },
   },
 
