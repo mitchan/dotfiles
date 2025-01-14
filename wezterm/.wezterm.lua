@@ -17,6 +17,7 @@ config.window_decorations = "RESIZE"
 
 -- fonts
 config.font = wezterm.font_with_fallback({ "JetBrains Mono", "MesloLGS Nerd Font" })
-config.font_size = 20.0
+config.font_size = 18.0
+config.line_height = 1.2
 
 return config
