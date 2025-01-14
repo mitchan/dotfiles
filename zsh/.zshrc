@@ -17,9 +17,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Alias
-alias vim="nvim"
+alias cd="z"
 alias portale="cd ~/Projects/Work/portale-b2c/"
 alias pro="cd ~/Projects/Work/contexts/repos/spiagge-pro/"
+alias v="nvim"
 
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 
@@ -76,3 +77,5 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
+# zoxide
+eval "$(zoxide init zsh)"
