@@ -13,6 +13,7 @@ return {
       require('mason-lspconfig').setup {
         automatic_installation = true,
         ensure_installed = {
+          'emmet_language_server',
           'eslint',
           'intelephense',
           'gopls',
