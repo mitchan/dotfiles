@@ -15,6 +15,9 @@ require('lazy').setup {
     {
       import = 'config.plugins',
     },
+    {
+      import = 'config.plugins.lsp',
+    },
   },
 
   checker = {
