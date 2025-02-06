@@ -5,8 +5,8 @@ font-feature = -liga
 
 font-size = 20
 
-background-blur-radius = 20
-background-opacity = 0.8
+# background-blur-radius = 20
+# background-opacity = 0.8
 
 # window-decoration = false
 
