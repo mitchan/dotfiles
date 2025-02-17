@@ -1,7 +1,9 @@
 -- local theme = 'catppuccin'
-local theme = 'tokyonight'
+local theme = 'rose-pine'
+-- local theme = 'tokyonight'
 
 local isCatppuccin = theme == 'catppuccin'
+local isRosePine = theme == 'rose-pine'
 local isTokyo = theme == 'tokyonight'
 
 local transparent_bg = false
@@ -37,6 +39,23 @@ return {
 
       if isCatppuccin then
         vim.cmd.colorscheme 'catppuccin'
+      end
+    end,
+  },
+
+  {
+    'rose-pine/neovim',
+    lazy = false,
+    name = 'rose-pine',
+    priority = isRosePine and 1000 or 50,
+    opts = {
+      styles = {
+        transparency = transparent_bg,
+      },
+    },
+    config = function()
+      if isRosePine then
+        vim.cmd 'colorscheme rose-pine'
       end
     end,
   },
