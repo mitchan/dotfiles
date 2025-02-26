@@ -53,7 +53,9 @@ return {
         transparency = transparent_bg,
       },
     },
-    config = function()
+    config = function(_, opts)
+      require('rose-pine').setup(opts)
+
       if isRosePine then
         vim.cmd 'colorscheme rose-pine'
       end

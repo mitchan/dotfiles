@@ -25,7 +25,7 @@ return {
           theme = 'ivy',
         },
         live_grep = {
-          theme = 'dropdown',
+          theme = 'ivy',
         },
       },
     }
