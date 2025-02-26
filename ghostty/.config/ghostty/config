@@ -6,10 +6,10 @@ font-feature = -liga
 font-size = 20
 
 # background-blur-radius = 20
-# background-opacity = 0.8
+# background-opacity = 0.9
 
 # window-decoration = false
 
 quit-after-last-window-closed = true
 
-theme = dark:catppuccin-mocha,light:catppuccin-latte
+theme = dark:rose-pine,light:catppuccin-latte
