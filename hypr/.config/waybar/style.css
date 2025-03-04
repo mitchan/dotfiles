@@ -23,6 +23,7 @@ window#waybar.hidden {
   color: transparent;
   background: transparent;
 }
+
 #tags {
   margin-top: 6px;
   margin-left: 12px;
@@ -137,6 +138,7 @@ window#waybar.hidden {
   color: #161320;
   background: #f8bd96;
 }
+
 #clock {
   margin-top: 6px;
   margin-left: 8px;
@@ -147,7 +149,6 @@ window#waybar.hidden {
   transition: none;
   color: #161320;
   background: #abe9b3;
-  /*background: #1A1826;*/
 }
 
 #memory {
@@ -246,3 +247,25 @@ window#waybar.hidden {
   color: #161320;
   background: #f2cdcd;
 }
+
+#workspaces {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background: #abe9b3;
+}
+
+#workspaces button {
+  all: initial;
+  min-width: 0;
+  box-shadow: inset 0 -3px transparent;
+  padding: 2px 4px;
+  color: rebeccapurple;
+}
+
+/* #workspaces button.active { */
+/*   color: rebeccapurple; */
+/* } */

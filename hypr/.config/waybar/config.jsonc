@@ -7,13 +7,11 @@
         "custom/media"
     ],
     "modules-center": [
-        "clock"
+        "clock",
     ],
     "modules-right": [
         // "mpd",
         // "idle_inhibitor",
-        "pulseaudio",
-        "network",
         // "power-profiles-daemon",
         // "cpu",
         // "memory",
@@ -24,7 +22,9 @@
         // "battery",
         // "battery#bat2",
         // "tray",
-        "custom/power"
+        "pulseaudio",
+        "network"
+        // "custom/power"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -98,7 +98,7 @@
     "clock": {
         // "timezone": "America/New_York",
         // "format": "{: %I:%M %p   %d/%m/%Y}"
-        "format": "{:%H:%M - %d/%m/%Y}"
+        "format": "{:%d/%m/%Y - %H:%M}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -186,14 +186,14 @@
     },
     "custom/power": {
         "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
+                "shutdown": "shutdown",
+                "reboot": "reboot",
+                "suspend": "systemctl suspend",
+                "hibernate": "systemctl hibernate"
+        }
     }
 }
