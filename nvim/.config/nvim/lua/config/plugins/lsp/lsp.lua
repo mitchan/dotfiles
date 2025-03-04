@@ -84,16 +84,63 @@ return {
           },
         },
         ts_ls = {
+          filetypes = { 'javascript', 'typescript', 'vue', 'typescriptreact' },
           init_options = {
             plugins = {
               {
                 name = '@vue/typescript-plugin',
-                location = '/Users/francesco/.nvm/versions/node/v22.8.0/lib/node_modules/@vue/typescript-plugin',
-                languages = { 'typescript', 'vue' },
+                location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                -- location = '~/.nvm/versions/node/v22.14.0/lib/node_modules/@vue/typescript-plugin',
+                languages = { 'vue' },
               },
             },
           },
-          filetypes = { 'javascript', 'typescript', 'vue', 'typescriptreact' },
+          settings = {
+            typescript = {
+              tsserver = {
+                useSyntaxServer = false,
+              },
+              inlayHints = {
+                includeInlayParameterNameHints = 'all',
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHints = true,
+                includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+            },
+          },
+        },
+        volar = {
+          init_options = {
+            vue = {
+              hybridMode = false,
+            },
+          },
+          settings = {
+            typescript = {
+              inlayHints = {
+                enumMemberValues = {
+                  enabled = true,
+                },
+                functionLikeReturnTypes = {
+                  enabled = true,
+                },
+                propertyDeclarationTypes = {
+                  enabled = true,
+                },
+                parameterTypes = {
+                  enabled = true,
+                  suppressWhenArgumentMatchesName = true,
+                },
+                variableTypes = {
+                  enabled = true,
+                },
+              },
+            },
+          },
         },
       }
 
