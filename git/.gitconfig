@@ -6,7 +6,9 @@
 [user]
 	name = Francesco Casetta
 	email = francesco.casetta@gmail.com
-[includeIf "gitdir:~/dev/Work/"]
+[includeIf "gitdir:~/workspace/bitbucket.org/spiaggeit"]
         path = ~/.gitconfig-work
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main
