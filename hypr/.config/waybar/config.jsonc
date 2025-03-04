@@ -3,8 +3,8 @@
     "height": 30, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": [
-        "hyprland/workspaces",
-        "custom/media"
+        "hyprland/workspaces"
+        // "custom/media"
     ],
     "modules-center": [
         "clock",
@@ -31,13 +31,14 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
-        "format-icons": {
-            "urgent": "",
-            "focused": "",
-            "active": "",
-            "default": ""
-        }
+        "format": "{name}"
+        // "format": "{name}: {icon}"
+        // "format-icons": {
+        //     "urgent": "",
+        //     "focused": "",
+        //     "active": "",
+        //     "default": ""
+        // }
     },
     "keyboard-state": {
         "numlock": true,
@@ -96,8 +97,6 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-        // "format": "{: %I:%M %p   %d/%m/%Y}"
         "format": "{:%d/%m/%Y - %H:%M}"
     },
     "cpu": {
