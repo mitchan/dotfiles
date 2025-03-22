@@ -29,18 +29,19 @@ return { -- Autoformat
       }
     end,
     formatters_by_ft = {
-      lua = { 'stylua' },
-      javascript = fmtPrettier(),
-      typescript = fmtPrettier(),
-      javascriptreact = fmtPrettier(),
-      typescriptreact = fmtPrettier(),
       css = fmtPrettier(),
-      vue = fmtPrettier(),
       html = fmtPrettier(),
+      javascript = fmtPrettier(),
+      javascriptreact = fmtPrettier(),
       json = fmtPrettier(),
-      yaml = fmtPrettier(),
+      lua = { 'stylua' },
       markdown = fmtPrettier(),
       php = { 'php-cs-fixer' },
+      python = { 'black' },
+      typescript = fmtPrettier(),
+      typescriptreact = fmtPrettier(),
+      vue = fmtPrettier(),
+      yaml = fmtPrettier(),
     },
     formatters = {
       ['php-cs-fixer'] = {
