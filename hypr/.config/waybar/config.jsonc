@@ -31,14 +31,14 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}"
-        // "format": "{name}: {icon}"
-        // "format-icons": {
-        //     "urgent": "",
-        //     "focused": "",
-        //     "active": "",
-        //     "default": ""
-        // }
+        // "format": "{name}",
+        "format": "{icon} {name}",
+        "format-icons": {
+            "urgent": "",
+            "focused": "",
+            "active": "",
+            "default": ""
+        }
     },
     "keyboard-state": {
         "numlock": true,
@@ -97,7 +97,8 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%d/%m/%Y - %H:%M}"
+        // "format": "{:%d/%m - %H:%M}"
+        "format": "{:%a %d %b - %R}"
     },
     "cpu": {
         "format": "{usage}% ",
