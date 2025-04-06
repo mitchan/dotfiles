@@ -33,7 +33,7 @@ return {
     {
       '<leader>en',
       function()
-        require('fzf-lua').live_grep()
+        require('fzf-lua').files { cwd = vim.fn.stdpath 'config' }
       end,
       desc = 'Find by grepping in project directory',
     },

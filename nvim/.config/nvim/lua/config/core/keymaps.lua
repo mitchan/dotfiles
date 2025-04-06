@@ -6,7 +6,7 @@ keymap.set('n', '<C-d>', '<C-d>zz')
 keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- diagnostic
-keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+-- keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Disable arrow keys in normal mode
 keymap.set('n', '<left>', '<cmd>echo "Use h to move!"<CR>')
@@ -20,8 +20,3 @@ keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' 
 keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
--- open vertical split
-keymap.set('n', '<C-\\>', '<cmd>vsplit<CR>')
-
-keymap.set('n', '<C-x>', '<Cmd>BufferClose<CR>', { noremap = true, silent = true })
