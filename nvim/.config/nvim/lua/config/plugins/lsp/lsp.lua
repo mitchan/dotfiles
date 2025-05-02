@@ -181,6 +181,7 @@ return {
           'dockerls',
           'eslint-lsp',
           'eslint_d',
+          'gofumpt',
           'gopls',
           'intelephense',
           'isort', -- python formatter

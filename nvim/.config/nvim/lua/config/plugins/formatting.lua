@@ -20,6 +20,7 @@ return {
     formatters_by_ft = {
       css = fmtPrettier(),
       html = fmtPrettier(),
+      go = { 'gofumpt' },
       javascript = fmtPrettier(),
       javascriptreact = fmtPrettier(),
       json = fmtPrettier(),
