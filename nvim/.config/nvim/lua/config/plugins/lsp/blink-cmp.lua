@@ -3,7 +3,7 @@ return {
   dependencies = { 'rafamadriz/friendly-snippets' },
 
   version = '*',
-  build = 'cargo build --release',
+  -- build = 'cargo build --release',
 
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config

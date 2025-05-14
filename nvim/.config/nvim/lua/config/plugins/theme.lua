@@ -1,5 +1,5 @@
--- local theme = 'catppuccin'
-local theme = 'onedark'
+local theme = 'catppuccin'
+-- local theme = 'onedark'
 -- local theme = 'rose-pine'
 -- local theme = 'tokyonight'
 
