@@ -12,12 +12,11 @@ config.enable_tab_bar = true
 
 -- window
 config.window_background_opacity = 0.8
-config.macos_window_background_blur = 20
+-- config.macos_window_background_blur = 20
 -- config.window_decorations = "RESIZE"
 
 -- fonts
-config.font = wezterm.font_with_fallback({ "ShureTechMono Nerd Font", "CaskaydiaCove Nerd Font", "JetBrains Mono",
-  "MesloLGS Nerd Font" })
+config.font = wezterm.font_with_fallback({ "JetBrains Mono" })
 config.font_size = 16.0
 
 return config
