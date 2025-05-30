@@ -1,10 +1,8 @@
-local theme = 'catppuccin'
--- local theme = 'onedark'
--- local theme = 'rose-pine'
+-- local theme = 'catppuccin'
+local theme = 'rose-pine'
 -- local theme = 'tokyonight'
 
 local isCatppuccin = theme == 'catppuccin'
-local isOneDark = theme == 'onedark'
 local isRosePine = theme == 'rose-pine'
 local isTokyo = theme == 'tokyonight'
 
@@ -60,20 +58,6 @@ return {
 
       if isRosePine then
         vim.cmd 'colorscheme rose-pine'
-      end
-    end,
-  },
-
-  {
-    'navarasu/onedark.nvim',
-    priority = isOneDark and 1000 or 50,
-    config = function()
-      require('onedark').setup {
-        style = 'deep',
-      }
-
-      if isOneDark then
-        require('onedark').load()
       end
     end,
   },
