@@ -18,8 +18,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias
 alias cd="z"
-alias lzd="lazydocker"
 alias v="nvim"
+alias rm="rm -i"
 
 # binding
 bindkey -s ^f "~/.local/scripts/tmux-sessionizer\n"
