@@ -13,9 +13,6 @@ return {
     {
       'neovim/nvim-lspconfig',
       dependencies = {
-        { 'williamboman/mason.nvim', opts = {} },
-        'williamboman/mason-lspconfig.nvim',
-        'WhoIsSethDaniel/mason-tool-installer.nvim',
         { 'j-hui/fidget.nvim', opts = {} },
         'saghen/blink.cmp',
       },
@@ -97,112 +94,6 @@ return {
                 [vim.diagnostic.severity.HINT] = diagnostic.message,
               }
               return diagnostic_message[diagnostic.severity]
-            end,
-          },
-        }
-
-        local original_capabilities = vim.lsp.protocol.make_client_capabilities()
-        local capabilities = require('blink.cmp').get_lsp_capabilities(original_capabilities)
-
-        local servers = {
-          lua_ls = {
-            settings = {
-              Lua = {
-                completion = {
-                  callSnippet = 'Replace',
-                },
-              },
-            },
-          },
-          pylsp = {},
-          ts_ls = {
-            filetypes = { 'javascript', 'typescript', 'vue', 'typescriptreact' },
-            init_options = {
-              plugins = {
-                {
-                  name = '@vue/typescript-plugin',
-                  location = vim.fn.stdpath 'data' .. '/mason/packages/vuels/node_modules/@vue/language-server',
-                  languages = { 'vue' },
-                },
-              },
-            },
-            -- settings = {
-            --   typescript = {
-            --     tsserver = {
-            --       useSyntaxServer = false,
-            --     },
-            --     inlayHints = {
-            --       includeInlayParameterNameHints = 'all',
-            --       includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-            --       includeInlayFunctionParameterTypeHints = true,
-            --       includeInlayVariableTypeHints = true,
-            --       includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-            --       includeInlayPropertyDeclarationTypeHints = true,
-            --       includeInlayFunctionLikeReturnTypeHints = true,
-            --       includeInlayEnumMemberValueHints = true,
-            --     },
-            --   },
-            -- },
-          },
-          vuels = {
-            init_options = {
-              vue = {
-                hybridMode = false,
-              },
-            },
-            -- settings = {
-            --   typescript = {
-            --     inlayHints = {
-            --       enumMemberValues = {
-            --         enabled = true,
-            --       },
-            --       functionLikeReturnTypes = {
-            --         enabled = true,
-            --       },
-            --       propertyDeclarationTypes = {
-            --         enabled = true,
-            --       },
-            --       parameterTypes = {
-            --         enabled = true,
-            --         suppressWhenArgumentMatchesName = true,
-            --       },
-            --       variableTypes = {
-            --         enabled = true,
-            --       },
-            --     },
-            --   },
-            -- },
-          },
-        }
-
-        local ensure_installed = vim.tbl_keys(servers or {})
-        vim.list_extend(ensure_installed, {
-          'black', -- python formatter
-          'dockerls',
-          'eslint-lsp',
-          'eslint_d',
-          'gofumpt',
-          'gopls',
-          'intelephense',
-          'isort', -- python formatter
-          'lua-language-server',
-          'php-cs-fixer', -- php formatter
-          'prettier',
-          'prettierd',
-          'stylua',
-          'ts_ls',
-          'vuels',
-        })
-        require('mason-tool-installer').setup { ensure_installed = ensure_installed }
-
-        require('mason-lspconfig').setup {
-          ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-          automatic_installation = false,
-          handlers = {
-            function(server_name)
-              local server = servers[server_name] or {}
-              server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-              require('lspconfig')[server_name].setup(server)
             end,
           },
         }
