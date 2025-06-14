@@ -1,9 +1,6 @@
 general {
-        output_format = "i3bar"
         colors = true
         interval = 5
-        separator = " \uE0B0 "
-        color_separator = "#000000"
 }
 
 order += "volume master"
