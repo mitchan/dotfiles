@@ -10,11 +10,14 @@
         "clock",
     ],
     "modules-right": [
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "disk"
+        // "network"
         // "mpd",
         // "idle_inhibitor",
         // "power-profiles-daemon",
-        "cpu",
-        "memory",
         // "temperature",
         // "backlight",
         // "keyboard-state",
@@ -22,8 +25,6 @@
         // "battery",
         // "battery#bat2",
         // "tray",
-        "pulseaudio",
-        "network"
         // "custom/power"
     ],
     // Modules configuration
@@ -139,15 +140,15 @@
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     },
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) ",
@@ -190,10 +191,19 @@
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
         "menu-actions": {
-                "shutdown": "shutdown",
-                "reboot": "reboot",
-                "suspend": "systemctl suspend",
-                "hibernate": "systemctl hibernate"
+            "shutdown": "shutdown",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
+        }
+    },
+    "disk": {
+        "path": "/",
+        "format": "{percentage_free}% ",
+        "interval": 30,
+        "states": {
+            "warning": 20,
+            "critical": 10
         }
     }
 }
