@@ -45,5 +45,9 @@ return {
       desc = 'Open buffers',
     },
   },
-  opts = {},
+  opts = {
+    winopts = {
+      fullscreen = true,
+    },
+  },
 }
