@@ -16,6 +16,7 @@ end)
 opt.breakindent = true
 
 opt.undofile = true
+opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
 
 opt.ignorecase = true
 opt.smartcase = true

@@ -1,12 +1,12 @@
-local theme = 'catppuccin'
+-- local theme = 'catppuccin'
 -- local theme = 'rose-pine'
--- local theme = 'tokyonight'
+local theme = 'tokyonight'
 
 local isCatppuccin = theme == 'catppuccin'
 local isRosePine = theme == 'rose-pine'
 local isTokyo = theme == 'tokyonight'
 
-local transparent_bg = false
+local transparent_bg = true
 
 return {
   {
