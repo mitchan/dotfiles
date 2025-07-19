@@ -1,9 +1,13 @@
--- vim.cmd 'let g:netrw_liststyle = 3'
+vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
+
+vim.g.have_nerd_font = true
 
 local opt = vim.opt
 
 opt.number = true
--- opt.relativenumber = true
+opt.relativenumber = true
+opt.colorcolumn = '100'
 
 opt.mouse = 'a'
 
@@ -21,7 +25,7 @@ opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
 opt.ignorecase = true
 opt.smartcase = true
 
-opt.updatetime = 250
+opt.updatetime = 50
 
 -- opt.timeoutlen = 300
 

@@ -1,10 +1,4 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
-
-vim.g.have_nerd_font = true
-
-require 'config.core.options'
-require 'config.core.keymaps'
+require 'config.core'
 require 'config.lazy'
 
 vim.api.nvim_create_autocmd('TextYankPost', {
