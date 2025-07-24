@@ -6,7 +6,13 @@ local isCatppuccin = theme == 'catppuccin'
 local isRosePine = theme == 'rose-pine'
 local isTokyo = theme == 'tokyonight'
 
-local transparent_bg = true
+local transparent_bg = false
+local is_light = true
+
+local catppuccin_flavor = 'mocha'
+if is_light then
+  catppuccin_flavor = 'latte'
+end
 
 return {
   {
@@ -19,7 +25,13 @@ return {
     config = function(_, opts)
       require('tokyonight').setup(opts)
 
-      if isTokyo then
+      if not isTokyo then
+        return
+      end
+
+      if is_light then
+        vim.cmd.colorscheme 'tokyonight-day'
+      else
         vim.cmd.colorscheme 'tokyonight'
       end
     end,
@@ -31,15 +43,17 @@ return {
     name = 'catppuccin',
     priority = isCatppuccin and 1000 or 50,
     opts = {
-      -- flavour = 'macchiato',
+      flavour = catppuccin_flavor,
       transparent_background = transparent_bg,
     },
     config = function(_, opts)
       require('catppuccin').setup(opts)
 
-      if isCatppuccin then
-        vim.cmd.colorscheme 'catppuccin'
+      if not isCatppuccin then
+        return
       end
+
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
 
