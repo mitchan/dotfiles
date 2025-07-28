@@ -21,7 +21,7 @@ update_prompt() {
     local C_RED='\[\e[38;2;243;139;168m\]'    # For error ($)
     local C_SUBTEXT='\[\e[38;2;166;173;200m\]' # For punctuation like [], ()
 
-    local prompt_info="${C_SUBTEXT}[${C_MAUVE}\\u@\\h ${C_BLUE}\\W${C_SUBTEXT}]"
+    local prompt_info="${C_SUBTEXT}[${C_BLUE}\\w${C_SUBTEXT}]"
 
     local branch_name=$(parse_git_branch)
     local prompt_git=""
