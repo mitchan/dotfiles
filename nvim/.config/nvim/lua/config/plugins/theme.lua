@@ -1,15 +1,17 @@
-local theme = 'catppuccin'
+-- local theme = 'catppuccin'
 -- local theme = 'rose-pine'
 -- local theme = 'tokyonight'
+local theme = 'vague'
 
 local isCatppuccin = theme == 'catppuccin'
 local isRosePine = theme == 'rose-pine'
 local isTokyo = theme == 'tokyonight'
+local isVague = theme == 'vague'
 
 local transparent_bg = false
-local is_light = true
+local is_light = false
 
-local catppuccin_flavor = 'mocha'
+local catppuccin_flavor = 'frappe'
 if is_light then
   catppuccin_flavor = 'latte'
 end
@@ -72,6 +74,23 @@ return {
 
       if isRosePine then
         vim.cmd 'colorscheme rose-pine'
+      end
+    end,
+  },
+
+  {
+    'vague2k/vague.nvim',
+    lazy = false,
+    name = 'vague',
+    priority = isVague and 1000 or 50,
+    opts = {
+      transparent = transparent_bg,
+    },
+    config = function(_, opts)
+      require('vague').setup(opts)
+
+      if isVague then
+        vim.cmd 'colorscheme vague'
       end
     end,
   },

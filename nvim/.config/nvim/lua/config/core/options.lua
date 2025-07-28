@@ -6,7 +6,7 @@ vim.g.have_nerd_font = true
 local opt = vim.opt
 
 opt.number = true
-opt.relativenumber = true
+-- opt.relativenumber = true
 -- opt.colorcolumn = '100'
 
 opt.mouse = 'a'
@@ -49,7 +49,7 @@ opt.autoindent = true -- copy indent from current line when starting new ones
 -- turn on termguicolors for tokyonight colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
--- opt.background = 'dark' -- colorschemes that can be light or dark will be made dark
+opt.background = 'dark' -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = 'yes' -- show sign column so that text doesn't shift
 
 -- backspace

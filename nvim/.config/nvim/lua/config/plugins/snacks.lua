@@ -13,7 +13,7 @@ return {
     {
       '<C-g>',
       function()
-        Snacks.picker.grep()
+        Snacks.picker.grep { layout = 'ivy' }
       end,
       desc = 'Grep Search',
     },
