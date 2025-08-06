@@ -1,0 +1,31 @@
+general {
+        colors = true
+        interval = 5
+}
+
+order += "volume master"
+order += "disk /"
+order += "load"
+order += "tztime local"
+
+battery all {
+        format = "%status %percentage %remaining"
+}
+
+tztime local {
+        format = " %Y-%m-%d %H:%M:%S "
+}
+
+load {
+        format = " %1min "
+}
+
+disk "/" {
+        format = " %avail "
+}
+
+volume master {
+    format = " ♪ %volume "
+    format_muted = " ♪ muted (%volume) "
+    device = "pulse"
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "deleting ./config/nvim"
+rm -rf ~/.config/nvim
+
+echo "deleting ~/.local/share/nvim"
+rm -rf ~/.local/share/nvim
+
+echo "deleting ~/.local/state/nvim"
+rm -rf ~/.local/state/nvim
+
+echo "deleting ~/.cache/nvim"
+rm -rf ~/.cache/nvim
