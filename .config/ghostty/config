@@ -3,7 +3,7 @@ font-feature = -calt
 font-feature = -dlig
 font-feature = -liga
 
-font-size = 16
+# font-size = 16
 
 # background = #000000
 # background-blur-radius = 20
@@ -11,7 +11,7 @@ font-size = 16
 
 # cursor-style = block
 # cursor-style-blink = false
-cursor-invert-fg-bg = true
+# cursor-invert-fg-bg = true
 
 window-padding-x = 4
 window-padding-y = 4

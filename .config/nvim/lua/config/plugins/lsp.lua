@@ -55,6 +55,8 @@ return {
         'lua_ls',
         'tailwindcss',
         'ts_ls',
+        'vtsls',
+        'vue_ls',
       }
 
       require('mason-lspconfig').setup {
