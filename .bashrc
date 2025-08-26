@@ -8,7 +8,7 @@ bind '"\e[B": history-search-forward'
 bind '"\C-f": "~/.local/scripts/tmux-sessionizer\n"'
 
 # prompt
-source ~/.local/scripts/get_prompt.sh
+source ~/.local/scripts/get_prompt
 
 # alias
 alias ls='ls --color=auto'
@@ -22,4 +22,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
 
