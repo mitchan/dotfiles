@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# copied from -> https://gist.github.com/ericmurphyxyz/37baa4c9da9d3b057a522f20a9ad6eba
+# vided -> https://www.youtube.com/watch?v=wp3LfWwCrZE&pp=ygURZXJpYyBtdXJwaHkgY2FjaGU%3D
+
+# The location of the cache for your aur helper
+AUR_CACHE_DIR=$HOME/.cache/yay
+
+# Get all cache directories for AUR helper
+AUR_CACHE_REMOVED="$(find "$AUR_CACHE_DIR" -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n +2)"
+# Remove everything for uninstalled AUR packages
+AUR_REMOVED=$(/usr/bin/paccache -ruvk0 $AUR_CACHE_REMOVED | sed '/\.cache/!d' | cut -d \' -f2 | rev | cut -d / -f2- | rev)
+[ -z "$AUR_REMOVED" ] || rm -rf $AUR_REMOVED
+
+# Keep latest version for uninstalled native packages, keep two latest versions for installed packages
+# Get all cache directories for AUR helper (without removed packages)
+AUR_CACHE="$(find "$AUR_CACHE_DIR" -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n +2)"
+
+paccache -qruk1
+paccache -qrk2 -c /var/cache/pacman/pkg $AUR_CACHE
