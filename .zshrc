@@ -36,3 +36,6 @@ export NVM_DIR="$HOME/.nvm"
 # bootdev
 export PATH="$PATH:$HOME/go/bin"
 
+# personal scripts
+export PATH="$PATH:$HOME/.local/scripts"
+
