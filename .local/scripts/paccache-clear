@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # copied from -> https://gist.github.com/ericmurphyxyz/37baa4c9da9d3b057a522f20a9ad6eba
-# vided -> https://www.youtube.com/watch?v=wp3LfWwCrZE&pp=ygURZXJpYyBtdXJwaHkgY2FjaGU%3D
+# video -> https://www.youtube.com/watch?v=wp3LfWwCrZE&pp=ygURZXJpYyBtdXJwaHkgY2FjaGU%3D
 
 # The location of the cache for your aur helper
 AUR_CACHE_DIR=$HOME/.cache/yay
@@ -16,5 +16,14 @@ AUR_REMOVED=$(/usr/bin/paccache -ruvk0 $AUR_CACHE_REMOVED | sed '/\.cache/!d' | 
 # Get all cache directories for AUR helper (without removed packages)
 AUR_CACHE="$(find "$AUR_CACHE_DIR" -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n +2)"
 
-paccache -qruk1
-paccache -qrk2 -c /var/cache/pacman/pkg $AUR_CACHE
+echo "Disk usage BEFORE cleaning:"
+du -sh /var/cache/pacman/pkg "$AUR_CACHE_DIR"
+
+echo -e "\n🧹 Cleaning up old package versions..."
+/usr/bin/paccache -qruk1
+/usr/bin/paccache -qrk2 -c /var/cache/pacman/pkg "$AUR_CACHE"
+
+echo -e "\n🎉 Cleaning finished!"
+echo "Disk usage AFTER cleaning:"
+du -sh /var/cache/pacman/pkg "$AUR_CACHE_DIR"
+
