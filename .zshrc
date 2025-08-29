@@ -22,6 +22,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Alias
+alias ls="eza"
 alias v="nvim"
 alias rm="rm -i"
 
