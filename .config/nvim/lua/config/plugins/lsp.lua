@@ -61,6 +61,6 @@ return {
   },
   config = function()
     require('utils.diagnostics').setup()
-    -- require 'servers'
+    require 'lsps'
   end,
 }
