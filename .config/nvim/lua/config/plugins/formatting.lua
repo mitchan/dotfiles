@@ -1,5 +1,5 @@
 local function fmtPrettier()
-  return { 'prettierd', 'prettier', stop_after_first = true }
+  return { 'prettier', stop_after_first = true }
 end
 
 return {
@@ -8,7 +8,7 @@ return {
   cmd = { 'ConformInfo' },
   opts = {
     notify_on_error = false,
-    format_on_save = function(bufnr)
+    format_on_save = function()
       -- example for preventing format for specific file types
       -- local disable_filetypes = { c = true, cpp = true }
       return {

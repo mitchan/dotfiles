@@ -4,17 +4,22 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": [
         "hyprland/workspaces"
-        // "custom/media"
     ],
     "modules-center": [
-        "clock",
+        "hyprland/window"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
+        "network",
+        "custom/sep",
+        // "cpu",
+        // "custom/sep",
+        // "memory",
+        // "custom/sep",
+        "disk",
+        "custom/sep",
         "pulseaudio",
-        "disk"
-        // "network"
+        "custom/sep",
+        "clock"
         // "mpd",
         // "idle_inhibitor",
         // "power-profiles-daemon",
@@ -32,14 +37,21 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        // "format": "{name}",
-        "format": "{icon} {name}",
+        "format": "{name}",
+        // "format": "{icon} {name}",
         "format-icons": {
             "urgent": "",
             "focused": "",
             "active": "",
             "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 10,
         }
+    },
+    "hyprland/window": {
+        "max-length": 40,
+        "separate-outputs": false
     },
     "keyboard-state": {
         "numlock": true,
@@ -99,7 +111,8 @@
     },
     "clock": {
         // "format": "{:%d/%m - %H:%M}"
-        "format": "{:%a %d %b - %R}"
+        // "format": "{:%a %d %b @ %R}"
+        "format": "{:%d/%m @ %R}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -151,8 +164,8 @@
         }
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format": "Online",
+        "format-disconnected": "Disconnected"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -205,5 +218,10 @@
             "warning": 20,
             "critical": 10
         }
+    },
+    "custom/sep": {
+        "format": "|",
+        "interval": 0,
+        "tooltip": false
     }
 }
