@@ -1,12 +1,15 @@
 -- local theme = 'catppuccin'
+-- local theme = 'dracula'
+local theme = 'gruvbox'
 -- local theme = 'rose-pine'
-local theme = 'tokyonight'
+-- local theme = 'tokyonight'
 -- local theme = 'vague'
 
 local isCatppuccin = theme == 'catppuccin'
+local isDracula = theme == 'dracula'
+local isGruvbox = theme == 'gruvbox'
 local isRosePine = theme == 'rose-pine'
 local isTokyo = theme == 'tokyonight'
-local isVague = theme == 'vague'
 
 local transparent_bg = false
 local is_light = false
@@ -79,18 +82,27 @@ return {
   },
 
   {
-    'vague2k/vague.nvim',
+    'dracula/vim',
     lazy = false,
-    name = 'vague',
-    priority = isVague and 1000 or 50,
-    opts = {
-      transparent = transparent_bg,
-    },
-    config = function(_, opts)
-      require('vague').setup(opts)
+    name = 'dracula',
+    priority = isDracula and 1000 or 50,
+    opts = {},
+    config = function()
+      if isDracula then
+        vim.cmd 'colorscheme dracula'
+      end
+    end,
+  },
 
-      if isVague then
-        vim.cmd 'colorscheme vague'
+  {
+    'morhetz/gruvbox',
+    lazy = false,
+    name = 'gruvbox',
+    priority = isGruvbox and 1000 or 50,
+    opts = {},
+    config = function()
+      if isGruvbox then
+        vim.cmd 'colorscheme gruvbox'
       end
     end,
   },

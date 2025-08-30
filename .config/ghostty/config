@@ -22,7 +22,9 @@ maximize = true
 
 quit-after-last-window-closed = true
 
-# theme = rose-pine
-theme = tokyonight
 # theme = catppuccin-frappe
 # theme = catppuccin-latte
+# theme = Dracula
+theme = GruvboxDarkHard
+# theme = rose-pine
+# theme = tokyonight

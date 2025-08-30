@@ -1,24 +1,9 @@
 return {
-  {
-    'folke/lazydev.nvim',
-    ft = 'lua',
-    opts = {
-      library = {
-        { path = 'luvit-meta/library', words = { 'vim%.uv' } },
-      },
-    },
-  },
-
   'neovim/nvim-lspconfig',
-
-  {
-    'mason-org/mason.nvim',
-    dependencies = {
-      'williamboman/mason-lspconfig.nvim',
-      'WhoIsSethDaniel/mason-tool-installer.nvim',
-    },
-    config = function()
-      require('mason').setup {
+  dependencies = {
+    {
+      'mason-org/mason.nvim',
+      opts = {
         ui = {
           icons = {
             package_installed = '✓',
@@ -26,46 +11,59 @@ return {
             package_uninstalled = '✗',
           },
         },
-      }
-
-      local mason_tool_installer = require 'mason-tool-installer'
-      mason_tool_installer.setup {
+      },
+    },
+    -- {
+    --   'williamboman/mason-lspconfig.nvim',
+    --   opts = {
+    --     ensure_installed = {
+    --     },
+    --   },
+    -- },
+    {
+      'WhoIsSethDaniel/mason-tool-installer.nvim',
+      opts = {
         ensure_installed = {
+          -- lsp
+          'bash-language-server',
+          'clangd',
+          'css-lsp',
+          'dockerfile-language-server',
+          'emmet-language-server',
+          'gopls',
+          'html-lsp',
+          'intelephense',
+          'lua-language-server',
+          'tailwindcss-language-server',
+          'typescript-language-server',
+
+          -- formatter / linters / etc...
           'black',
           'eslint_d',
           'gofumpt',
           'intelephense',
           'isort',
           'prettier',
-          'prettierd',
           'pylint',
           'stylua',
         },
-      }
-
-      local lsps = {
-        'bashls',
-        'clangd',
-        'cssls',
-        'dockerls',
-        'emmet_language_server',
-        'gopls',
-        'html',
-        'intelephense',
-        'lua_ls',
-        'tailwindcss',
-        'ts_ls',
-        -- 'vtsls',
-        -- 'vue_ls',
-      }
-
-      require('mason-lspconfig').setup {
-        ensure_installed = lsps,
-      }
-
-      vim.lsp.enable(lsps)
-
-      require('utils.diagnostics').setup()
-    end,
+      },
+    },
+    {
+      'folke/lazydev.nvim',
+      ft = 'lua',
+      opts = {
+        library = {
+          {
+            path = 'luvit-meta/library',
+            words = { 'vim%.uv' },
+          },
+        },
+      },
+    },
   },
+  config = function()
+    require('utils.diagnostics').setup()
+    require 'lsps'
+  end,
 }

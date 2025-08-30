@@ -31,6 +31,13 @@ return {
       desc = 'Find by grepping in project directory',
     },
     {
+      '<leader>ca',
+      function()
+        require('fzf-lua').lsp_code_actions()
+      end,
+      desc = 'Code actions',
+    },
+    {
       '<leader>en',
       function()
         require('fzf-lua').files { cwd = vim.fn.stdpath 'config' }
