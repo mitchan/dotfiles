@@ -13,31 +13,30 @@ return {
         },
       },
     },
-    -- {
-    --   'williamboman/mason-lspconfig.nvim',
-    --   opts = {
-    --     ensure_installed = {
-    --     },
-    --   },
-    -- },
+    {
+      'williamboman/mason-lspconfig.nvim',
+      opts = {
+        -- automatic_installation = false,
+        ensure_installed = {
+          'bashls',
+          'clangd',
+          'cssls',
+          'dockerls',
+          'eslint',
+          'gopls',
+          'html',
+          'intelephense',
+          'lua_ls',
+          'tailwindcss',
+          'vtsls',
+          'vue_ls',
+        },
+      },
+    },
     {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       opts = {
         ensure_installed = {
-          -- lsp
-          'bash-language-server',
-          'clangd',
-          'css-lsp',
-          'dockerfile-language-server',
-          'emmet-language-server',
-          'gopls',
-          'html-lsp',
-          'intelephense',
-          'lua-language-server',
-          'tailwindcss-language-server',
-          'typescript-language-server',
-
-          -- formatter / linters / etc...
           'black',
           'eslint_d',
           'gofumpt',
@@ -64,6 +63,6 @@ return {
   },
   config = function()
     require('utils.diagnostics').setup()
-    require 'lsps'
+    -- require 'lsps'
   end,
 }

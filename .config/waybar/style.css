@@ -45,7 +45,6 @@ window#waybar {
 
 #clock {
   color: @fg;
-  padding-right: 6px;
 }
 
 #custom-sep {

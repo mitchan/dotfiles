@@ -6,7 +6,8 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
+        // "hyprland/window"
     ],
     "modules-right": [
         "network",
@@ -17,9 +18,7 @@
         // "custom/sep",
         "disk",
         "custom/sep",
-        "pulseaudio",
-        "custom/sep",
-        "clock"
+        "pulseaudio"
         // "mpd",
         // "idle_inhibitor",
         // "power-profiles-daemon",
@@ -111,8 +110,8 @@
     },
     "clock": {
         // "format": "{:%d/%m - %H:%M}"
-        // "format": "{:%a %d %b @ %R}"
-        "format": "{:%d/%m @ %R}"
+        "format": "{:%a %d %b ~ %R}"
+        // "format": "{:%d/%m @ %R}"
     },
     "cpu": {
         "format": "{usage}% ",
