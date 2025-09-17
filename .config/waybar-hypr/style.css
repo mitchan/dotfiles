@@ -13,13 +13,13 @@ window#waybar {
 
 #workspaces button {
   padding: 0 6px;
-  color: @orange;
+  color: @fg;
   background: transparent;
   border-bottom: 3px solid @bg;
 }
 #workspaces button.active {
   color: @orange;
-  border-bottom: 3px solid @orange;
+  /* border-bottom: 3px solid @orange; */
 }
 #workspaces button.empty {
   color: @foreground;
