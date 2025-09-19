@@ -13,15 +13,29 @@
 /* @define-color yellow #f1fa8c; */
 
 /* Gruvbox Dark Theme */
-@define-color bg-darker rgb(29, 32, 33);
-@define-color bg rgb(40, 40, 40);
-@define-color selection rgb(60, 56, 54);
-@define-color fg rgb(235, 219, 178);
-@define-color comment rgb(146, 131, 116);
-@define-color cyan rgb(142, 192, 124);
-@define-color green rgb(184, 187, 38);
-@define-color orange rgb(254, 128, 25);
-@define-color pink rgb(211, 134, 155);
-@define-color purple rgb(131, 165, 152);
-@define-color red rgb(251, 73, 52);
-@define-color yellow rgb(250, 189, 47);
+/* @define-color bg-darker rgb(29, 32, 33); */
+/* @define-color bg rgb(40, 40, 40); */
+/* @define-color selection rgb(60, 56, 54); */
+/* @define-color fg rgb(235, 219, 178); */
+/* @define-color comment rgb(146, 131, 116); */
+/* @define-color cyan rgb(142, 192, 124); */
+/* @define-color green rgb(184, 187, 38); */
+/* @define-color orange rgb(254, 128, 25); */
+/* @define-color pink rgb(211, 134, 155); */
+/* @define-color purple rgb(131, 165, 152); */
+/* @define-color red rgb(251, 73, 52); */
+/* @define-color yellow rgb(250, 189, 47); */
+
+/* Nord Theme */
+@define-color bg-darker rgb(35, 39, 46);
+@define-color bg rgb(46, 52, 64);
+@define-color selection rgb(59, 66, 82);
+@define-color fg rgb(236, 239, 244);
+@define-color comment rgb(129, 138, 162);
+@define-color cyan rgb(136, 192, 208);
+@define-color green rgb(163, 190, 140);
+@define-color orange rgb(208, 135, 112);
+@define-color pink rgb(180, 142, 173);
+@define-color purple rgb(129, 161, 193);
+@define-color red rgb(191, 97, 106);
+@define-color yellow rgb(235, 203, 139);

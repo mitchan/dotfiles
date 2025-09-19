@@ -1,6 +1,7 @@
 -- local theme = 'catppuccin'
 -- local theme = 'dracula'
-local theme = 'gruvbox'
+-- local theme = 'gruvbox'
+local theme = 'nord'
 -- local theme = 'rose-pine'
 -- local theme = 'tokyonight'
 -- local theme = 'vague'
@@ -8,6 +9,7 @@ local theme = 'gruvbox'
 local isCatppuccin = theme == 'catppuccin'
 local isDracula = theme == 'dracula'
 local isGruvbox = theme == 'gruvbox'
+local isNord = theme == 'nord'
 local isRosePine = theme == 'rose-pine'
 local isTokyo = theme == 'tokyonight'
 
@@ -103,6 +105,18 @@ return {
     config = function()
       if isGruvbox then
         vim.cmd 'colorscheme gruvbox'
+      end
+    end,
+  },
+
+  {
+    'shaunsingh/nord.nvim',
+    lazy = false,
+    priority = isNord and 1000 or 50,
+    opts = {},
+    config = function()
+      if isNord then
+        vim.cmd 'colorscheme nord'
       end
     end,
   },
