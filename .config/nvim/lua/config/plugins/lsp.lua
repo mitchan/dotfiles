@@ -65,7 +65,7 @@ return {
     require('utils.diagnostics').setup()
 
     vim.lsp.config('ts_ls', {
-      filetypes = { 'javascript', 'typescript', 'vue', 'typescriptreact' },
+      filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx', 'vue' },
       init_options = {
         plugins = {
           {
