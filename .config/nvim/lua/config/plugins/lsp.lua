@@ -29,6 +29,7 @@ return {
           'lua_ls',
           'tailwindcss',
           'ts_ls',
+          'vue_ls',
         },
       },
     },
@@ -62,6 +63,19 @@ return {
   },
   config = function()
     require('utils.diagnostics').setup()
+
+    vim.lsp.config('ts_ls', {
+      filetypes = { 'javascript', 'typescript', 'vue', 'typescriptreact' },
+      init_options = {
+        plugins = {
+          {
+            name = '@vue/typescript-plugin',
+            location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+            languages = { 'vue' },
+          },
+        },
+      },
+    })
     -- require 'lsps'
   end,
 }
