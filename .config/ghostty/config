@@ -25,6 +25,6 @@ quit-after-last-window-closed = true
 # theme = catppuccin-frappe
 # theme = catppuccin-latte
 # theme = Dracula
-# theme = Gruvbox Dark Hard
+theme = Gruvbox Dark Hard
 # theme = rose-pine
 # theme = tokyonight
