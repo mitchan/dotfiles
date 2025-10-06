@@ -1,5 +1,5 @@
 local function fmtPrettier()
-  return { 'prettier', stop_after_first = true }
+  return { 'prettierd', 'prettier', stop_after_first = true }
 end
 
 return {

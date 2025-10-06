@@ -37,13 +37,11 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       opts = {
         ensure_installed = {
-          'black',
           'eslint_d',
           'gofumpt',
           'intelephense',
-          'isort',
+          'php-cs-fixer',
           'prettier',
-          'pylint',
           'stylua',
         },
       },
