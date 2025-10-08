@@ -7,7 +7,8 @@
 }
 
 window#waybar {
-  background-color: @bg;
+  /* background-color: @bg; */
+  background-color: transparent;
   color: @fg;
 }
 
@@ -15,7 +16,7 @@ window#waybar {
   padding: 0 6px;
   color: @fg;
   background: transparent;
-  border-bottom: 3px solid @bg;
+  /* border-bottom: 3px solid @bg; */
 }
 #workspaces button.active {
   color: @orange;
@@ -26,7 +27,7 @@ window#waybar {
 }
 #workspaces button.empty.active {
   color: @orange;
-  border-bottom: 3px solid @orange;
+  /* border-bottom: 3px solid @orange; */
 }
 
 #workspaces button.urgent {
