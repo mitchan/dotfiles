@@ -39,6 +39,8 @@
         // "format": "{name}",
         "format": "{icon} {name}",
         "format-icons": {
+            "8": "",
+            "10": "",
             "urgent": "",
             "focused": "",
             "active": "",
