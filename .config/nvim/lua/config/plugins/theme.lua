@@ -1,15 +1,12 @@
 -- local theme = 'catppuccin'
 -- local theme = 'dracula'
 local theme = 'gruvbox'
--- local theme = 'nord'
 -- local theme = 'rose-pine'
 -- local theme = 'tokyonight'
--- local theme = 'vague'
 
 local isCatppuccin = theme == 'catppuccin'
 local isDracula = theme == 'dracula'
 local isGruvbox = theme == 'gruvbox'
-local isNord = theme == 'nord'
 local isRosePine = theme == 'rose-pine'
 local isTokyo = theme == 'tokyonight'
 
@@ -96,27 +93,31 @@ return {
     end,
   },
 
-  {
-    'morhetz/gruvbox',
-    lazy = false,
-    name = 'gruvbox',
-    priority = isGruvbox and 1000 or 50,
-    opts = {},
-    config = function()
-      if isGruvbox then
-        vim.cmd 'colorscheme gruvbox'
-      end
-    end,
-  },
+  -- {
+  --   'morhetz/gruvbox',
+  --   lazy = false,
+  --   name = 'gruvbox',
+  --   priority = isGruvbox and 1000 or 50,
+  --   opts = {},
+  --   config = function()
+  --     if isGruvbox then
+  --       vim.g.gruvbox_invert_selection = 0
+  --       vim.g.gruvbox_italic = 1
+  --       vim.g.gruvbox_bold = 1
+  --
+  --       vim.cmd 'colorscheme gruvbox'
+  --     end
+  --   end,
+  -- },
 
   {
-    'shaunsingh/nord.nvim',
-    lazy = false,
-    priority = isNord and 1000 or 50,
-    opts = {},
+    'sainnhe/gruvbox-material',
+    -- priority = 1000,
+    priority = isGruvbox and 1000 or 50,
     config = function()
-      if isNord then
-        vim.cmd 'colorscheme nord'
+      if isGruvbox then
+        vim.g.gruvbox_material_enable_italic = true
+        vim.cmd.colorscheme 'gruvbox-material'
       end
     end,
   },

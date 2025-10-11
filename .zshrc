@@ -40,3 +40,6 @@ export PATH="$PATH:$HOME/go/bin"
 # personal scripts
 export PATH="$PATH:$HOME/.local/scripts"
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
