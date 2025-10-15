@@ -1,0 +1,81 @@
+@import url("./colors.css");
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+window#waybar {
+  /* background-color: @bg; */
+  background-color: transparent;
+  color: @fg;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  color: @fg;
+  background: transparent;
+  /* border-bottom: 3px solid @bg; */
+}
+#workspaces button.active {
+  color: @orange;
+  /* border-bottom: 3px solid @orange; */
+}
+#workspaces button.empty {
+  color: @foreground;
+}
+#workspaces button.empty.active {
+  color: @orange;
+  /* border-bottom: 3px solid @orange; */
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+}
+
+#clock,
+#custom-sep,
+#cpu,
+#memory,
+#disk,
+#network {
+  padding: 0 4px;
+  color: @foreground;
+}
+
+#clock {
+  color: @fg;
+}
+
+#custom-sep {
+  color: @comment;
+}
+
+#network {
+  color: @green;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#cpu {
+  color: @blue;
+}
+
+#memory {
+  color: @orange;
+}
+
+#pulseaudio {
+  color: @yellow;
+}
+
+#disk {
+  color: @cyan;
+}
+
+#keyboard-state {
+  color: @purple;
+}
