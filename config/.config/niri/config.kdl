@@ -280,7 +280,8 @@ layout {
 spawn-at-startup "/usr/lib/xdg-desktop-portal-gtk"
 spawn-at-startup "/usr/lib/xdg-desktop-portal-gnome"
 spawn-at-startup "~/.config/waybar-sway/start.sh"
-// spawn-at-startup "swaybg --image ~/.config/wallpapers/silksong.jpg --mode fill &"
+spawn-at-startup "~/.local/scripts/niri-swaybg"
+spawn-at-startup "~/.local/scripts/niri-swayidle"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
