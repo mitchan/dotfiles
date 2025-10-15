@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+killall swaybg
+pkill swaybg
+sleep 0.5
+
+swaybg -m fill -i ~/.config/wallpapers/silksong.jpg &
