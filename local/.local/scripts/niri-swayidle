@@ -4,4 +4,4 @@ killall swayidle
 pkill swayidle
 sleep 0.5
 
-swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f' before-sleep 'swaylock -f' &
+swayidle -w timeout 301 'niri msg action power-off-monitors' timeout 300 'swaylock -f' before-sleep 'swaylock -f' &
