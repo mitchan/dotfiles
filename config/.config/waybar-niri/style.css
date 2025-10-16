@@ -1,4 +1,5 @@
-@import url("./colors.css");
+/* @import url("./colors.css"); */
+@import url("/home/fracas/.cache/wal/colors-waybar.css");
 
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
@@ -7,8 +8,8 @@
 }
 
 window#waybar {
-  background-color: @bg;
-  color: @fg;
+  background-color: @background;
+  color: @foreground;
 }
 
 .modules-left {
@@ -21,13 +22,11 @@ window#waybar {
 
 #workspaces button {
   padding: 0 6px;
-  color: @fg;
+  color: @foreground;
   background: transparent;
-  /* border-bottom: 3px solid @bg; */
 }
 #workspaces button.active {
   color: @orange;
-  /* border-bottom: 3px solid @orange; */
 }
 #workspaces button.empty {
   color: @foreground;
@@ -52,19 +51,19 @@ window#waybar {
 }
 
 #clock {
-  color: @fg;
+  color: @color3;
 }
 
 #custom-sep {
-  color: @comment;
+  color: @foreground;
 }
 
 #network {
-  color: @green;
+  color: @color5;
 }
 
 #network.disconnected {
-  color: @red;
+  color: @color9;
 }
 
 #cpu {
@@ -76,18 +75,23 @@ window#waybar {
 }
 
 #pulseaudio {
-  color: @yellow;
+  color: @color6;
 }
 
 #disk {
-  color: @cyan;
+  color: @color11;
 }
 
 #keyboard-state {
   color: @purple;
 }
 
-#idle_inhibitor {
-  color: @fg;
+#idle_inhibitor.deactivated {
+  color: @color12;
+  padding: 0 4px;
+}
+
+#idle_inhibitor.activated {
+  color: @color13;
   padding: 0 4px;
 }
