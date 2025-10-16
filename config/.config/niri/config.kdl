@@ -342,8 +342,10 @@ window-rule {
 // fullscreen windows
 window-rule {
     match app-id=r#"1Password$"#
+    match app-id=r#"firefox$"#
+    match app-id=r#"vivaldi-stable$"#
 
-    open-fullscreen true
+    default-column-width { proportion 1.0; }
 }
 
 window-rule {
