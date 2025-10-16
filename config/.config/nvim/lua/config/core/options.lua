@@ -1,6 +1,6 @@
 vim.opt.cursorline = true
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- visual settings
 vim.opt.colorcolumn = '100'
