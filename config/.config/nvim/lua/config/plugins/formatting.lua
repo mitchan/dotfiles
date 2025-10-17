@@ -1,5 +1,5 @@
 local function fmtPrettier()
-  return { 'prettierd', 'prettier', stop_after_first = true }
+  return { 'biome', 'prettierd', 'prettier', stop_after_first = true }
 end
 
 return {

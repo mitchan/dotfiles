@@ -20,25 +20,24 @@ window#waybar {
   padding-right: 8px;
 }
 
-#workspaces button {
-  padding: 0 6px;
-  color: @foreground;
-  background: transparent;
-}
-#workspaces button.active {
-  color: @orange;
-}
-#workspaces button.empty {
-  color: @foreground;
-}
-#workspaces button.empty.active {
-  color: @orange;
-  /* border-bottom: 3px solid @orange; */
-}
-
-#workspaces button.urgent {
-  background-color: @red;
-}
+/* #workspaces button { */
+/*   padding: 0 6px; */
+/*   color: @foreground; */
+/*   background: transparent; */
+/* } */
+/* #workspaces button.active { */
+/*   color: @orange; */
+/* } */
+/* #workspaces button.empty { */
+/*   color: @foreground; */
+/* } */
+/* #workspaces button.empty.active { */
+/*   color: @orange; */
+/* } */
+/**/
+/* #workspaces button.urgent { */
+/*   background-color: @red; */
+/* } */
 
 #clock,
 #custom-sep,
