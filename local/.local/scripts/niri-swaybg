@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-killall swaybg
-pkill swaybg
-sleep 0.5
+# killall swaybg
+# pkill swaybg
+# sleep 0.5
+#
+# swaybg -m fill -i ~/.config/wallpapers/birmingham-museums-trust-nbneQlI2M1A-unsplash.jpg &
 
-swaybg -m fill -i ~/.config/wallpapers/silksong.jpg &
+wal -i ~/.config/wallpapers/waifu02.jpeg
