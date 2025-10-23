@@ -3,6 +3,8 @@
     "height": 32, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": [
+        "tray",
+        "custom/sep",
         "idle_inhibitor"
     ],
     "modules-center": [
@@ -27,7 +29,6 @@
         // "sway/language",
         // "battery",
         // "battery#bat2",
-        // "tray",
         // "custom/power"
     ],
     // Modules configuration
