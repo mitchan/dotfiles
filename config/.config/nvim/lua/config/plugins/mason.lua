@@ -20,7 +20,7 @@ return {
     },
     dependencies = {
       {
-        'williamboman/mason.nvim',
+        'mason-org/mason.nvim',
         opts = {
           ui = {
             icons = {
@@ -43,11 +43,12 @@ return {
         'intelephense',
         'php-cs-fixer',
         'prettier',
+        'prettierd',
         'stylua',
       },
     },
     dependencies = {
-      'williamboman/mason.nvim',
+      'mason-org/mason.nvim',
     },
   },
   {

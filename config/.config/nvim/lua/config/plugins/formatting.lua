@@ -1,5 +1,6 @@
 local function fmtPrettier()
-  return { 'biome', 'prettierd', 'prettier', stop_after_first = true }
+  -- return { 'prettierd', 'prettier', stop_after_first = true }
+  return { 'biome', 'biome-organize-imports' }
 end
 
 return {

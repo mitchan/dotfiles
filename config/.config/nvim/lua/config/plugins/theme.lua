@@ -1,7 +1,7 @@
 -- local theme = 'catppuccin'
 -- local theme = 'dracula'
--- local theme = 'gruvbox'
-local theme = 'rose-pine'
+local theme = 'gruvbox'
+-- local theme = 'rose-pine'
 -- local theme = 'tokyonight'
 
 local isCatppuccin = theme == 'catppuccin'
