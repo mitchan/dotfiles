@@ -2,8 +2,6 @@ local theme = 'gruvbox'
 
 local isGruvbox = theme == 'gruvbox'
 
-local transparent_bg = false
-
 return {
   {
     'sainnhe/gruvbox-material',

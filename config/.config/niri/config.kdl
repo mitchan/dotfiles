@@ -74,7 +74,7 @@ input {
 
 output "PNP(BNQ) BenQ RD240Q 86R02457019" {
     mode "2560x1600@60.002"
-    scale 1.25
+    scale 1.0
 }
 
 // You can configure outputs by their name, which you can find
