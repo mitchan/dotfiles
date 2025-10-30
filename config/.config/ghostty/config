@@ -6,11 +6,12 @@ font-feature = -liga
 # font-size = 16
 # font-family = "FiraMono Nerd Font"
 
-# background = #000000
-# background-blur-radius = 20
-# background-opacity = 0.65
+background = #000000
+background-blur-radius = 20
+background-opacity = 0.80
 
-# cursor-style = block
+adjust-cell-height = 25%
+cursor-style = block
 # cursor-style-blink = false
 # cursor-invert-fg-bg = true
 

@@ -5,7 +5,10 @@
 # 0 blinking line cursor
 # 1 blinking block cursor
 # 2 steady block cursor
-echo -ne "\033[2 q"
+# echo -ne "\033[2 q"
+
+# pywal colors
+source ~/.cache/wal/colors.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
