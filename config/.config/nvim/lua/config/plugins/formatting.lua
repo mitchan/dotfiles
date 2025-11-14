@@ -19,6 +19,7 @@ return {
       }
     end,
     formatters_by_ft = {
+      c = { 'clang-format' },
       css = fmtPrettier(),
       html = fmtPrettier(),
       go = { 'gofumpt' },

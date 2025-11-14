@@ -74,7 +74,7 @@ input {
 
 output "PNP(BNQ) BenQ RD240Q 86R02457019" {
     mode "2560x1600@60.002"
-    scale 1.25
+    scale 1.00
 }
 
 // You can configure outputs by their name, which you can find
@@ -279,6 +279,7 @@ layout {
 spawn-at-startup "/usr/lib/xdg-desktop-portal-gtk"
 spawn-at-startup "/usr/lib/xdg-desktop-portal-gnome"
 spawn-at-startup "~/.config/waybar-niri/start.sh"
+// spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "~/.local/scripts/niri-swaybg"
 spawn-at-startup "~/.local/scripts/niri-swayidle"
 
@@ -616,9 +617,10 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Mod+Shift+S { spawn "~/.local/scripts/my-screenshot"; }
+    // Print { screenshot; }
+    // Ctrl+Print { screenshot-screen; }
+    // Alt+Print { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

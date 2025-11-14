@@ -2,7 +2,7 @@ return {
   'saghen/blink.cmp',
   dependencies = { 'rafamadriz/friendly-snippets' },
 
-  version = '1.*',
+  version = '*',
 
   opts = {
     keymap = { preset = 'enter' },
@@ -21,9 +21,12 @@ return {
 
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
+      providers = {
+        lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+      },
     },
 
-    fuzzy = { implementation = 'prefer_rust_with_warning' },
+    fuzzy = { implementation = 'lua' },
   },
   opts_extend = { 'sources.default' },
 }

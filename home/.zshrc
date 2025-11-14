@@ -15,8 +15,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export DISABLE_AUTO_TITLE='true'
 export EDITOR='nvim'
 
-# ZSH_THEME="af-magic"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic"
+# ZSH_THEME="robbyrussell"
 
 plugins=(
 	git
@@ -26,7 +26,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Alias
-alias ls="eza"
+# alias ls="eza"
 alias v="nvim"
 alias rm="rm -i"
 
@@ -47,3 +47,7 @@ export PATH="$PATH:$HOME/.local/scripts"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/home/fracas/.bun/_bun" ] && source "/home/fracas/.bun/_bun"
+
