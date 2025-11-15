@@ -44,13 +44,13 @@ return {
       end,
       desc = 'Find by grepping in project directory',
     },
-    {
-      '<leader><leader>',
-      function()
-        require('fzf-lua').buffers()
-      end,
-      desc = 'Open buffers',
-    },
+    -- {
+    --   '<leader><leader>',
+    --   function()
+    --     require('fzf-lua').buffers()
+    --   end,
+    --   desc = 'Open buffers',
+    -- },
   },
   opts = {},
 }
