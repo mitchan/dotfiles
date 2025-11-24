@@ -1,27 +1,27 @@
-local theme = 'gruvbox'
--- local theme = 'tokyonight'
+-- local theme = 'gruvbox'
+-- local theme = 'nightfox'
+local theme = 'onedark'
 
 local isGruvbox = theme == 'gruvbox'
-local isTokyo = theme == 'tokyonight'
+local isNightfox = theme == 'nightfox'
+local isOneDark = theme == 'onedark'
 
 local transparent_bg = false
 
 return {
   {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    priority = isTokyo and 1000 or 50,
+    'EdenEast/nightfox.nvim',
+    priority = isNightfox and 1000 or 50,
     opts = {
-      transparent = transparent_bg,
+      options = {
+        transparent = transparent_bg,
+      },
     },
     config = function(_, opts)
-      require('tokyonight').setup(opts)
-
-      if not isTokyo then
-        return
+      if isNightfox then
+        require('nightfox').setup(opts)
+        vim.cmd.colorscheme 'terafox'
       end
-
-      vim.cmd.colorscheme 'tokyonight'
     end,
   },
 
@@ -34,6 +34,18 @@ return {
         vim.g.gruvbox_material_transparent_background = transparent_bg
         vim.cmd.colorscheme 'gruvbox-material'
       end
+    end,
+  },
+
+  {
+    'navarasu/onedark.nvim',
+    priority = isOneDark and 1000 or 50,
+    opts = {
+      style = 'warmer',
+    },
+    config = function(_, opts)
+      require('onedark').setup(opts)
+      require('onedark').load()
     end,
   },
 }

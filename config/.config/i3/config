@@ -41,7 +41,7 @@ exec --no-startup-id picom
 exec --no-startup-id flameshot
 
 # wallpaper
-exec --no-startup-id feh --bg-fill ~/.config/wallpapers/birmingham-museums-trust-nbneQlI2M1A-unsplash.jpg
+exec --no-startup-id feh --bg-fill ~/.config/wallpapers/203572.jpg
 # exec --no-startup-id wal -i ~/.config/wallpapers/203514.jpg
 
 # keyrate

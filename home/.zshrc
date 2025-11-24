@@ -15,8 +15,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export DISABLE_AUTO_TITLE='true'
 export EDITOR='nvim'
 
-ZSH_THEME="af-magic"
-# ZSH_THEME="robbyrussell"
+# ZSH_THEME="af-magic"
+ZSH_THEME="robbyrussell"
 
 plugins=(
 	git
