@@ -19,7 +19,6 @@ return {
       }
     end,
     formatters_by_ft = {
-      c = { 'clang-format' },
       css = fmtPrettier(),
       html = fmtPrettier(),
       go = { 'gofumpt' },
@@ -28,8 +27,6 @@ return {
       json = fmtPrettier(),
       lua = { 'stylua' },
       markdown = fmtPrettier(),
-      php = { 'php-cs-fixer' },
-      python = { 'isort', 'black' },
       typescript = fmtPrettier(),
       typescriptreact = fmtPrettier(),
       vue = fmtPrettier(),

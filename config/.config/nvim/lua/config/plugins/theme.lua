@@ -1,6 +1,6 @@
 -- local theme = 'gruvbox'
--- local theme = 'nightfox'
-local theme = 'onedark'
+local theme = 'nightfox'
+-- local theme = 'onedark'
 
 local isGruvbox = theme == 'gruvbox'
 local isNightfox = theme == 'nightfox'
@@ -44,8 +44,10 @@ return {
       style = 'warmer',
     },
     config = function(_, opts)
-      require('onedark').setup(opts)
-      require('onedark').load()
+      if isOneDark then
+        require('onedark').setup(opts)
+        require('onedark').load()
+      end
     end,
   },
 }
