@@ -51,3 +51,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # bun completions
 [ -s "/home/fracas/.bun/_bun" ] && source "/home/fracas/.bun/_bun"
 
+export PATH="$HOME/.local/bin:$PATH"

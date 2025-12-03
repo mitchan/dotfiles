@@ -24,13 +24,13 @@ return {
     end,
   },
 
-  -- {
-  --   'nvim-mini/mini.pairs',
-  --   version = false,
-  --   config = function(_, opts)
-  --     require('mini.pairs').setup(opts)
-  --   end,
-  -- },
+  {
+    'nvim-mini/mini.pairs',
+    version = false,
+    config = function(_, opts)
+      require('mini.pairs').setup(opts)
+    end,
+  },
 
   {
     'nvim-mini/mini.statusline',

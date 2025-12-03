@@ -6,9 +6,9 @@ font-feature = -liga
 font-size = 18
 # font-family = "FiraMono Nerd Font"
 
-# background = #000000
-# background-blur-radius = 20
-# background-opacity = 0.80
+background = #000000
+background-blur-radius = 20
+background-opacity = 0.80
 
 # adjust-cell-height = 25%
 # cursor-style = block

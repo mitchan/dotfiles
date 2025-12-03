@@ -1,12 +1,12 @@
--- local theme = 'gruvbox'
-local theme = 'nightfox'
+local theme = 'gruvbox'
+-- local theme = 'nightfox'
 -- local theme = 'onedark'
 
 local isGruvbox = theme == 'gruvbox'
 local isNightfox = theme == 'nightfox'
 local isOneDark = theme == 'onedark'
 
-local transparent_bg = false
+local transparent_bg = true
 
 return {
   {

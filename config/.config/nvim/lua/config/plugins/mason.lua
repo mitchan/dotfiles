@@ -11,7 +11,6 @@ return {
         'eslint',
         'gopls',
         'html',
-        'intelephense',
         'lua_ls',
         'tailwindcss',
         'ts_ls',
@@ -38,10 +37,9 @@ return {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     opts = {
       ensure_installed = {
+        'biome',
         'eslint_d',
         'gofumpt',
-        'intelephense',
-        'php-cs-fixer',
         'prettier',
         'prettierd',
         'stylua',
